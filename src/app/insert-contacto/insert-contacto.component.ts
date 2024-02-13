@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
@@ -7,19 +7,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { PersonasService } from '../data.service';
 import { NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-insert-contacto',
   templateUrl: './insert-contacto.component.html',
   styleUrls: ['./insert-contacto.component.css'],
-  standalone: true,
-  imports: [
-    MatIconModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule,
-  ],
 })
 export class InsertContactoComponent {
   Nombre: string = '';

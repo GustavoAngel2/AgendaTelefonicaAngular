@@ -13,19 +13,20 @@ import { UpdateContactoComponent } from '../update-contacto/update-contacto.comp
 })
 export class ContactoComponent implements OnInit {
   displayedColumns: string[] = [
-    'Id',
+    //  'Id',
     'Nombre',
-    'ApPaterno',
-    'ApMaterno',
-    'Alias',
-    'Direccion',
-    'NumMovil',
-    'NumCasa',
-    'Correo',
-    'NumEmergencia',
-    'Empresa',
-    'Departamento',
-    'Puesto',
+    // 'ApPaterno',
+    // 'ApMaterno',
+    // 'Alias',
+    // 'Direccion',
+    // 'NumMovil',
+    // 'NumCasa',
+    // 'Correo',
+    // 'NumEmergencia',
+    // 'Empresa',
+    // 'Departamento',
+    // 'Puesto',
+    'Acciones',
   ];
   dataSource: MatTableDataSource<personas>;
 

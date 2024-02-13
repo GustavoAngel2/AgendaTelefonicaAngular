@@ -1,36 +1,62 @@
-<div class="contacto">
-  <img class="contactImage" src="./assets/contactImg.jpg" />
-  <div class="options">
-    <mat-form-field>
-      <mat-label>Nombre</mat-label>
-      <input matInput />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Apeido paterno</mat-label>
-      <input matInput />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Apeido materno</mat-label>
-      <input matInput />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Alias (Opcional)</mat-label>
-      <input matInput />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label></mat-label>
-      <input matInput />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Empresa</mat-label>
-      <mat-select>
-        <mat-option value="one">First option</mat-option>
-        <mat-option value="two">Second option</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Textarea</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
+<h1 mat-dialog-title>Agregar un contacto</h1>
+<div mat-dialog-content class="mat-dialog-grid">
+  <!-- Fila para el formulario -->
+  <div class="mat-dialog-row">
+    <!-- Columna para el campo de nombre -->
+    <div class="mat-dialog-cell">
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Ingresa el nombre" [(ngModel)]="Nombre">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Apellido Paterno</mat-label>
+        <input matInput placeholder="Ingresa la direccion" [(ngModel)]="ApPaterno">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Apellido Materno</mat-label>
+        <input matInput placeholder="Usuario Actualiza" [(ngModel)]="ApMaterno">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Alias</mat-label>
+        <input matInput placeholder="Usuario Actualiza" [(ngModel)]="Alias">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Direccion</mat-label>
+        <input matInput placeholder="Usuario Actualiza" [(ngModel)]="Direccion">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Numero movil</mat-label>
+        <input matInput placeholder="Usuario Actualiza" [(ngModel)]="NumMovil">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Numero de casa</mat-label>
+        <input matInput placeholder="Usuario Actualiza" [(ngModel)]="NumCasa">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Correo</mat-label>
+        <input matInput placeholder="Usuario Actualiza" [(ngModel)]="Correo">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Numero de emergencia</mat-label>
+        <input matInput placeholder="Usuario Actualiza" [(ngModel)]="NumEmergencia">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Empresa</mat-label>
+        <input matInput placeholder="Usuario Actualiza" [(ngModel)]="Empresa">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Departamento</mat-label>
+        <input matInput placeholder="Usuario Actualiza" [(ngModel)]="Departamento">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Puesto</mat-label>
+        <input matInput placeholder="Usuario Actualiza" [(ngModel)]="Puesto">
+      </mat-form-field>
+    </div>
   </div>
+  <!-- Puedes agregar más filas con más campos aquí -->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="insertar()">Insertar</button>
 </div>

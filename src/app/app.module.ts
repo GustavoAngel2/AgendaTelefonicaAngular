@@ -23,6 +23,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http'; //Es importante
+import { InsertContactoComponent } from './insert-contacto/insert-contacto.component';
 const appRoutes: Routes = [{ path: 'contacto', component: ContactoComponent }];
 
 @NgModule({
@@ -31,9 +32,11 @@ const appRoutes: Routes = [{ path: 'contacto', component: ContactoComponent }];
     InicioComponent,
     UpdateContactoComponent,
     ContactoComponent,
+    InsertContactoComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
@@ -47,7 +50,6 @@ const appRoutes: Routes = [{ path: 'contacto', component: ContactoComponent }];
     MatTableModule,
     RouterModule.forRoot(appRoutes, { enableTracing: true }),
     MatInputModule,
-    FormsModule,
     MatCardModule,
     MatDialogModule,
     MatDatepickerModule,
