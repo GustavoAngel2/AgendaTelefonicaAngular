@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PersonasService } from '../data.service';
+import { personas } from '../modelos/personasModel';
 
 export interface PeriodicElement {
   name: string;
@@ -21,7 +23,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css']
+  styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent {
   displayedColumns: string[] = ['position', 'name'];
