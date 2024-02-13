@@ -1,14 +1,14 @@
 <div class="header">
-  <h1 mat-dialog-title>Editar Contacto</h1>
+  <h1 mat-dialog-title>Contacto</h1>
 </div>
 <div mat-dialog-content class="mat-dialog-grid">
   <!-- Fila para el formulario -->
   <div class="mat-dialog-row">
     <!-- Columna para el campo de nombre -->
     <div class="mat-dialog-cell" style="display: flex; flex-direction: column; gap: 3px;">
-      <mat-form-field style="display: none;">
+      <mat-form-field>
         <mat-label>Id</mat-label>
-        <input
+        <input readonly
           matInput
           placeholder="Ingresa el nombre"
           [(ngModel)]="personas.Id"
@@ -17,7 +17,7 @@
       <br>
       <mat-form-field>
         <mat-label>Nombre</mat-label>
-        <input
+        <input readonly
           matInput
           placeholder="Ingresa el nombre"
           [(ngModel)]="personas.Nombre"
@@ -27,7 +27,7 @@
       <mat-form-field>
         <mat-label>ApPaterno</mat-label>
         <input
-          matInput 
+          matInput
           placeholder="Ingresa el nombre"
           [(ngModel)]="personas.ApPaterno"
         />
@@ -45,7 +45,7 @@
       <mat-form-field>
         <mat-label>Alias</mat-label>
         <input
-          matInput 
+          matInput
           placeholder="Ingresa el nombre"
           [(ngModel)]="personas.Alias"
         />
@@ -81,7 +81,7 @@
       <mat-form-field>
         <mat-label>Correo</mat-label>
         <input
-          matInput 
+          matInput
           placeholder="Ingresa el Usuario"
           [(ngModel)]="personas.Correo"
         />
@@ -99,7 +99,7 @@
       <mat-form-field>
         <mat-label>Empresa</mat-label>
         <input
-          matInput 
+          matInput
           placeholder="Ingresa el Usuario"
           [(ngModel)]="personas.Empresa"
         />
@@ -117,7 +117,7 @@
       <mat-form-field>
         <mat-label>Puesto</mat-label>
         <input
-          matInput 
+          matInput
           placeholder="Ingresa el Usuario"
           [(ngModel)]="personas.Puesto"
         />
@@ -125,8 +125,4 @@
     </div>
   </div>
   <!-- Puedes agregar más filas con más campos aquí -->
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Cancelar</button>
-  <button mat-button (click)="guardar()">Guardar Cambios</button>
 </div>

@@ -6,6 +6,7 @@ import {
   ApiResponse,
   personasUpdate,
   personasDelete,
+  personasMostrar,
 } from './modelos/personasModel';
 
 @Injectable({
@@ -53,6 +54,25 @@ export class PersonasService {
     return this.http.put(`${this.apiUrl}/Contactos/Delete`, { Id });
   }
   updatePersona(PersonasData: personasUpdate): Observable<ApiResponse> {
+    const body = {
+      Id: PersonasData.Id,
+      Nombre: PersonasData.Nombre,
+      ApPaterno: PersonasData.ApPaterno,
+      ApMaterno: PersonasData.ApMaterno,
+      Alias: PersonasData.Alias,
+      Direccion: PersonasData.Direccion,
+      NumMovil: PersonasData.NumMovil,
+      NumCasa: PersonasData.NumCasa,
+      Correo: PersonasData.Correo,
+      NumEmergencia: PersonasData.NumEmergencia,
+      Empresa: PersonasData.Empresa,
+      Departamento: PersonasData.Departamento,
+      Puesto: PersonasData.Puesto,
+    };
+    console.log('Enviando solicitud con el siguiente cuerpo: ', body);
+    return this.http.put<ApiResponse>(`${this.apiUrl}/Contactos/Update`, body);
+  }
+    mostrarPersona(PersonasData: personasMostrar): Observable<ApiResponse> {
     const body = {
       Id: PersonasData.Id,
       Nombre: PersonasData.Nombre,

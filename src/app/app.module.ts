@@ -24,6 +24,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http'; //Es importante
 import { InsertContactoComponent } from './insert-contacto/insert-contacto.component';
+import { ViewContactoComponent } from './view-contacto/view-contacto.component';
 const appRoutes: Routes = [{ path: 'contacto', component: ContactoComponent }];
 
 @NgModule({
@@ -33,6 +34,7 @@ const appRoutes: Routes = [{ path: 'contacto', component: ContactoComponent }];
     UpdateContactoComponent,
     ContactoComponent,
     InsertContactoComponent,
+    ViewContactoComponent,
   ],
   imports: [
     BrowserModule,

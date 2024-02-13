@@ -94,6 +94,8 @@
         <mat-icon class="action-btn green" (click)="abrirEditarModal(elemento)">edit</mat-icon>
         <mat-icon></mat-icon>
         <mat-icon class="action-btn red" (click)="eliminarContacto(elemento.Id)">delete</mat-icon>
+        <mat-icon></mat-icon>
+        <mat-icon class="action-btn red" (click)="verContacto(elemento)">visibility</mat-icon>
       </td>
     </ng-container>
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

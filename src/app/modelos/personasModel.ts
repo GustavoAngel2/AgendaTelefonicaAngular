@@ -60,3 +60,19 @@ export interface personasUpdate {
 export interface personasDelete {
   Id: number;
 }
+
+export interface personasMostrar{
+    Id: number;
+  Nombre: string;
+  ApPaterno: string;
+  ApMaterno: string;
+  Alias: string;
+  Direccion: string;
+  NumMovil: string;
+  NumCasa: string;
+  Correo: string;
+  NumEmergencia: string;
+  Empresa: string;
+  Departamento: string;
+  Puesto: string;
+}

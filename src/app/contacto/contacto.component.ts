@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { InsertContactoComponent } from '../insert-contacto/insert-contacto.component';
 import { UpdateContactoComponent } from '../update-contacto/update-contacto.component';
+import { ViewContactoComponent } from '../view-contacto/view-contacto.component';
 
 @Component({
   selector: 'app-contacto',
@@ -101,7 +102,19 @@ export class ContactoComponent implements OnInit {
   }
   abrirEditarModal(catmodulo: personas) {
     const dialogRef = this.dialog.open(UpdateContactoComponent, {
-      width: '250px',
+      width: '550px',
+      data: catmodulo, // Pasa el objeto de departamento a la modal
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+      }
+    });
+  }
+
+  verContacto(catmodulo: personas) {
+    const dialogRef = this.dialog.open(ViewContactoComponent, {
+      width: '550px',
       data: catmodulo, // Pasa el objeto de departamento a la modal
     });
 
